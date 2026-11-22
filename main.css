@@ -6,6 +6,7 @@
 }
 
 body {
+    padding: 0 16px;
 }
 
 .container {
@@ -18,12 +19,17 @@ form {
     margin-top: 40px;
 }
 
-input, textarea, button {
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+input,
+button {
     display: block;
     padding: 8px;
     margin-bottom: 8px;
     width: 100%;
-    resize: none;
 }
 
 button {
@@ -41,24 +47,18 @@ button:hover {
     background-color: #27ae60;
 }
 
-.success-message {
-    background-color: #2ecc71;
-    color: #fff;
+.message {
+    display: none;
     padding: 16px;
-    display: none;
-}
-
-.error-message {
-    font-size: 12px;
-    background-color: #e74c3c;
     color: #fff;
-    padding: 8px;
-    margin-bottom: 8px;
-    display: none;
 }
 
-input.error {
-    color: red;
-    border-color: red;
-    outline-color: red;
+.message.success {
+    display: block;
+    background-color: #2ecc71;
+}
+
+.message.error {
+    display: block;
+    background-color: #e74c3c;
 }
